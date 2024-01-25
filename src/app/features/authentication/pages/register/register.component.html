@@ -145,9 +145,13 @@
                                         <th mat-header-cell *matHeaderCellDef>Action</th>
                                         <td mat-cell *matCellDef="let element" [hidden]="loader || !(dataSource.length>0)">
                                             <a href="javascript:void(0)" (click)="editDataDialog(element)"
-                                            class="list-link-color">Edit</a> <br />
+                                            class="list-link-color">
+                                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon>
+                                          </a> <br />
                                             <a href="javascript:void(0)" (click)="deleteUser(element)"
-                                            class="list-link-color">Delete</a>
+                                            class="list-link-color">
+                                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete"></mat-icon>
+                                          </a>
                                         </td>
                                       </ng-container>
                     

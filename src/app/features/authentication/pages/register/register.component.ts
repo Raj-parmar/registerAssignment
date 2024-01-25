@@ -163,6 +163,7 @@ export class RegisterComponent implements OnInit {
   private updateRegisteredUsers(updatedUsers: any[]): void {
     // Update the BehaviorSubject and notify observers
     this.registeredUsersSubject.next(updatedUsers);
+    this.registeredUsers = this.registeredUsersSubject;
     console.log("main data",this.registeredUsersSubject)
   }
 
