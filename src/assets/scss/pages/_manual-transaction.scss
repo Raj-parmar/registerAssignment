@@ -1,0 +1,170 @@
+.product-group {
+    display: flex;
+    align-items: center;
+    .product-details {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .product-name {
+            h3 {
+                font-weight: 500;
+                margin-bottom: 0;
+            }
+        }
+
+        .product-action {
+            text-align: center;
+            display: flex;
+            // align-items: center;
+            .price {
+                // font-size: 18px;
+                // font-weight: 500;
+                text-align: right;
+                width: 145px;
+                .mat-icon {
+                    font-size: 20px;
+                    height: 20px;
+                    width: 20px;
+                    color: rgba($black, 0.5);
+                    cursor: pointer;
+                }
+                input{
+                    width: 80px;
+                    line-height: 22px;
+                    font-size: 14px;
+                    text-align: center;
+                    background: transparent;
+                    border: 1px solid $theme;
+                    color: $theme;
+                    @include border-radius(5px, all);
+                }
+            }
+            .add-cart {
+                // width: 38px;
+                // height: 38px;
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+                // background: $primary;
+                // color: $white;
+                // @include border-radius(50%,all);
+                margin-left: 1rem;
+            }
+            .counter {
+                // margin: auto;
+                // display: flex;
+                // align-items: center;
+                // margin-right: 1rem;
+                // justify-content: center;
+                text-align: right;
+                width: 131px;
+                input {
+                    width: 50px;
+                    line-height: 22px;
+                    font-size: 14px;
+                    text-align: center;
+                    background: transparent;
+                    border: 1px solid $theme;
+                    color: $theme;
+                    appearance: none;
+                    outline: 0;
+                    margin-left: 2px;
+                    @include border-radius(5px, all);
+                }
+                span {
+                    display: block;
+                    font-size: 25px;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    color: $theme;
+                    user-select: none;
+                    &.down{
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+    .subData-Input{
+        width: 100%;
+        margin-top: 1rem;
+        .mat-checkbox{
+            display: block;
+        }
+    }
+    &.vertical{
+        flex-direction: column;
+    }
+}
+
+.product-categoty-list{
+  height: calc(100vh - 235px);
+  overflow: auto;
+}
+
+
+.product-name {
+  &.other-product-info{
+    display: flex;
+    width: calc(100% - 290px);
+    .other-product-name{
+      margin-right: 1rem;
+      width: 70%;
+    }
+    .taxSelect{
+      width: 60px;
+      .mat-form-field{
+        width: 100px;
+        .mat-form-field-infix{
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+.manualTransaction-product-list{
+  .mat-expansion-panel .mat-expansion-panel-body{
+    padding: 0.5rem;
+  }
+  .mat-expansion-panel-header-title{
+    text-transform: uppercase;
+  }
+  .mat-card{
+    padding: 5px 10px;
+    margin-bottom: 0.5rem;
+  }
+  .product-name{
+    h3{
+      font-size: 14px;
+      line-height: 18px;
+    }
+    .format{
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+  .product-face{
+    height: 35px;
+    width: 50px;
+    border: 1px solid #ddd;
+    border-radius: 0;
+    img {
+      height: 35px;
+      width: auto;
+      object-fit: cover;
+    }
+  }
+}
+
+.shippingNotRequired{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 430px;
+    @media screen and (max-width: 1484px) {
+      height: 440px;
+    }
+}

@@ -1,0 +1,42 @@
+.purchases-list{
+  .mat-filter{
+    .mat-expansion-panel{
+        .mat-expansion-panel-header{
+            height: unset !important;
+            min-height: 36px !important;
+            .mat-expansion-panel-header-title{
+              .selected-filters {
+                  .applied-filter {
+                      margin-top: 0.2rem;
+                  }
+              }
+          }
+        }
+    }
+  }
+}
+
+.delete-checked-data{
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.select-export-msg{
+  font-size: 12px;
+}
+
+.paymentStatus,
+.passwordVisibility{
+  display: flex;
+  flex-direction: column;
+  // margin: 15px 0;
+  align-items: flex-start;
+  .mat-radio-button{
+    margin: 5px;
+  }
+}
+.balanceDue{
+  td{
+    padding-left: 0 !important;
+  }
+}

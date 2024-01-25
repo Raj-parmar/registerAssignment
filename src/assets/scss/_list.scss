@@ -1,0 +1,71 @@
+mat-list {
+    mat-list-item {
+        height: auto !important;
+    }
+}
+
+.assessment-resources-sub-card {
+    .mat-list-base {
+        .mat-list-item {
+            // height: 34px !important;
+
+            .mat-list-item-content {
+                padding-left: 0px;
+            }
+        }
+    }
+}
+.payment-summary-block{
+  .mat-list-base{
+    padding-top: 0;
+    border-bottom: 1px solid rgba($black, 20%);
+    .mat-list-item{
+      height: 35px !important;
+      .mat-list-item-content{
+        padding: 0 !important;
+        justify-content: space-between !important;
+        .payment-summary-label{
+          color: rgba($black, 50%);
+        }
+      }
+    }
+  }
+}
+
+.register-info-card{
+  .mat-list-base .mat-list-item .mat-list-item-content,
+  .mat-list-base .mat-list-option .mat-list-item-content{
+      padding: 0;
+  }
+}
+
+.custom-bullets-list{
+  ul{
+    list-style: none;
+    padding-left: 0;
+    li{
+      margin-bottom: 10px;
+      div{
+        display: flex;
+        align-items: center;
+        fa-icon{
+          width: 2em;
+          min-width: 2em;
+        }
+        .svg-inline--fa{
+          height: 2em;
+        }
+        span{
+          margin-left: 10px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .mat-list-base .mat-list-item {
+    font-size: 14px;
+  }
+}

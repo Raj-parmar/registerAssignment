@@ -1,0 +1,192 @@
+#yourcart{
+  .mat-card-title{
+    font-size: 18px;
+    border-bottom: 1px solid rgba($black, 20%);
+  }
+}
+.mat-card{
+  .mat-card-header{
+    .mat-card-header-text{
+      margin: 0;
+    }
+  }
+}
+
+// ::ng-deep{
+  .mat-card{
+    &.custom-card{
+      cursor: pointer;
+      box-shadow: none;
+      padding: 0;
+      border-radius: 16px;
+      .mat-card-header{
+        background-color: $primary;
+        color: $white;
+        padding: 16px;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        .mat-card-header-text{
+          margin: 0;
+        }
+        .mat-card-title{
+          margin-bottom: 0;
+        }
+      }
+      .mat-card-content{
+        padding: 16px;
+        background: $off-white-2;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+      }
+      &:hover{
+        // box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.31);
+        box-shadow: 0 0 11px #0000004f;
+        transform: translateY(-4px) scale(1.01);
+        transition: all .25s ease;
+      }
+    }
+    &.custom-card-one{
+      box-shadow: none;
+      border:  1px solid $border-color;
+    }
+    &.main-card{
+      padding: 25px 20px;
+      border-radius: 20px;
+      // border: 1px solid rgba($black, 20%);
+      box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+      min-height: calc(100vh - 360px);
+      &.card-no-height{
+        min-height: unset !important;
+      }
+      .mat-card-header {
+        .mat-card-title{
+          font-weight: 400;
+          font-size: 32px;
+          color: $black;
+          line-height: 45px;
+          .title-divider-separator{
+            border-top: 3px solid $secondary;
+            width: 60%;
+            margin: 20px 0;
+            display: block;
+          }
+        }
+      }
+    }
+
+    &.inner-card{
+      margin-top: 10px;
+      box-shadow: none;
+      padding: 0;
+      .mat-card-header {
+        .mat-card-title{
+          font-size: 24px;
+        }
+      }
+    }
+
+    // &.inner-grid-card{
+    //   box-shadow: none;
+    //   border:  1px solid $border-color;
+    //   .mat-card-header {
+    //     .mat-card-title{
+    //       color: $secondary;
+    //       font-size: 18px;
+    //     }
+    //   }
+    //   &:hover{
+
+    //   }
+    // }
+  }
+// }
+
+.inner-grid-card-new{
+  border:  1px solid $border-color;
+  padding: 16px !important;
+  // margin-bottom: 40px;
+  border-radius: 15px 15px 15px 15px !important;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.15) !important;
+  span{
+    color: $secondary;
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: block;
+  }
+  &:hover{
+    border-color: $secondary;
+    box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.19);
+    cursor: pointer;
+  }
+}
+
+.assessment-resources-sub-card{
+  .mat-card-title{
+      font-size: 24px !important;
+      margin-bottom: 0px !important;
+      line-height: 30px !important;
+  }
+}
+
+.order-summary-block{
+  &.mat-card{
+    &.main-card{
+      min-height: unset;
+      padding: 0;
+      .mat-card-header {
+        display: block;
+        .mat-card-title{
+          border-bottom: none !important;
+          background: $primary;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          line-height: 18px;
+          color: $white;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+.your-shopping-cart{
+  &.mat-card{
+    &.main-card{
+      min-height: unset;
+      padding: 0;
+      .mat-card-header {
+        display: block;
+        .mat-card-title{
+          border-bottom: none !important;
+          background: $off-white-1;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          line-height: 18px;
+          margin-bottom: 0;
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+.eq-screen-cards{
+  .mat-card{
+      &.main-card{
+          min-height: unset !important;
+          .eq-title {
+            border-bottom: 1px solid #ddd;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+      }
+  }
+  .mat-form-field {
+    ::ng-deep {
+        .mat-form-field-wrapper {
+            padding-bottom: 0 !important;
+        }
+    }
+}
+}

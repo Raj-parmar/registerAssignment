@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/variables";
+@import "~@ng-select/ng-select/themes/material.theme.css";
+/*Bootstrap library injected*/
+// @import "~bootstrap/scss/functions";
+// @import "~bootstrap/scss/variables";
+// @import "~bootstrap/scss/mixins";
+// @import "~bootstrap/scss/reboot";
+// @import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/bootstrap";
+
+
+/*Custom scss injected*/
+
+@import "assets/scss/mixins";
+
+@import "assets/scss/parts/core";
+@import "assets/scss/parts/components";
+@import "assets/scss/parts/pages";
+@import "assets/scss/parts/plugins";
+
+@import "assets/scss/common";
+
+
+
+.d-none{
+    display: none !important;
+}
+

@@ -1,0 +1,112 @@
+<div class="body-max-width">
+
+  <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayoutAlign="start stretch">
+        <div fxFlex="100%" fxFlex.lt-md="100%" fxFlex.lt-sm="100%">
+            <mat-card class="main-card card-no-height p-0">
+                <mat-card-content>
+                    <form [formGroup]="form" name="form" (ngSubmit)="registerFun()">
+                        <mat-card class="main-card no-shadow card-no-height">
+                            <mat-card-header class="align-items-baseline">
+                                <mat-card-title>
+                                    Edit Register Details
+                                    <span class="title-divider-separator"></span>
+                                </mat-card-title>
+                            </mat-card-header>
+
+                
+                            <mat-card-content>
+                        <p class="mb-4 sub-title-text">To create an account, please enter the information requested below.</p>
+                        <div fxLayout="row wrap" fxLayoutGap="10px grid" fxLayout.xs="column" fxLayoutAlign="start stretch">
+                            <div fxFlex="33.33%" fxFlex.lt-md="100" class="mt-1">
+                                <label class="custom">First Name <span>*</span></label>
+                                <mat-form-field appearance="outline" class="w-100">
+                                    <input type="text" matInput placeholder="First Name" formControlName="fname">
+                                    <mat-error *ngIf="f['fname'].touched && f['fname'].invalid || submitted">
+                              <div *ngIf="f['fname'].errors && f['fname'].errors['required']">
+                                  {{constants.error.required}}
+                              </div>
+                              <div *ngIf="f['fname'].errors && f['fname'].errors['pattern']">
+                                  {{constants.error.valid_name}}
+                              </div>
+                          </mat-error>
+                      </mat-form-field>
+                    </div>
+                    <div fxFlex="33.33%"  fxFlex.lt-md="100" class="mt-1">
+                        <label class="custom">Phone <span>*</span></label>
+                        <mat-form-field appearance="outline" class="w-100">
+                            <input type="text" matInput placeholder="Phone" name="phone" formControlName="phone"
+                                maxlength="18" emojiValid>
+                            <mat-error
+                                *ngIf="f['phone'].touched && f['phone'].invalid || submitted">
+                                <div *ngIf="f['phone'].errors && f['phone'].errors['required']">
+                                    {{constants.error.required}}</div>
+                                <div
+                                    *ngIf="f['phone'].errors && (f['phone'].errors['pattern'] || f['phone'].errors['minlength'])">
+                                    {{constants.error.valid_phone_number}}</div>
+                            </mat-error>
+                        </mat-form-field>
+                      </div>
+                    <div fxFlex="33.33%"  fxFlex.lt-md="100" class="mt-1">
+                      <label class="custom">Country <span>*</span></label>
+                      <div class="register-select">
+
+                          <ng-select class="w-100" [items]="countryList" appearance="outline"
+                              formControlName="country" name="country" bindLabel="name"
+                              bindValue="value" appendTo="body" class="pb-0"
+                              (change)="changeCoutry()">
+                          </ng-select>
+                      </div>
+                      <mat-error
+                          *ngIf="f['country'].touched && f['country'].invalid || submitted">
+                          <div *ngIf="f['country'].errors && f['country'].errors['required']">
+                              {{constants.error.required}}
+                          </div>
+                      </mat-error>
+                    </div>
+                    <div fxFlex="33.33%"  fxFlex.lt-md="100" class="mt-1">
+                      <label class="custom">State/Province <span>*</span></label>
+                      <mat-form-field class="w-100" appearance="outline"
+                          *ngIf="stateList.length == 0">
+                          <input matInput placeholder="State/Province" name="state" formControlName="state" emojiValid>
+                          <mat-error
+                              *ngIf="f['state'].touched && f['state'].invalid || submitted">
+                              <div *ngIf="f['state'].errors && f['state'].errors['required']">
+                                  {{constants.error.required}}
+                              </div>
+                          </mat-error>
+                      </mat-form-field>
+                      <span *ngIf="stateList.length > 0">
+                          <div class="register-select">
+                              <ng-select [items]="stateList" appearance="outline"
+                                  formControlName="state" name="state" bindLabel="name"
+                                  bindValue="value" appendTo="body" class="pb-0" [ngClass]="[(submitted || f['state'].touched) ? 'ng-invalid' : 'ng-invalid-overwride']">
+                              </ng-select>
+                          </div>
+                          <mat-error
+                              *ngIf="f['state'].touched && f['state'].invalid || submitted">
+                              <div *ngIf="f['state'].errors && f['state'].errors['required']">
+                                  {{constants.error.required}}
+                              </div>
+                          </mat-error>
+                      </span>
+                    </div>
+                    
+                    <div fxFlex="100%"  fxFlex.lt-md="100" class="mt-1 text-right">
+                      <button mat-raised-button color="primary" class="responsive-btn">
+                        <span>Submit</span>
+                      </button>
+                        <button mat-raised-button color="primary" class="responsive-btn" (click)="onClose()">
+                          <span>cancel</span>
+                        </button>
+                      </div>
+                  
+                  </div>
+                </mat-card-content>
+            </mat-card>
+                    </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+

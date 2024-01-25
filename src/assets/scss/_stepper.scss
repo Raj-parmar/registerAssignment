@@ -1,0 +1,100 @@
+.checkout-stepper{
+  .mat-stepper-vertical {
+    background-color: transparent;
+    .mat-step{
+      // margin-top: 4px;
+      margin-bottom: 10px;
+      .mat-step-header{
+        // padding-bottom: 0;
+        // padding-right: 0;
+        overflow: inherit;
+        padding: 0;
+        border-top-left-radius: 10px;
+        .mat-step-label{
+          width: 100%;
+          border-radius: 10px;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          &.mat-step-label-active{
+            background: #fff;
+            width: 100%;
+            // padding: 10px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            .mat-step-text-label{
+              padding: 19px 15px;
+              background-color: $off-white-1;
+            }
+          }
+          .mat-step-text-label{
+            padding: 19px 15px;
+            background-color: $off-white-1;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            width: 100%;
+            font-size: 18px;
+          }
+        }
+        .mat-step-header-ripple{
+          display: none;
+        }
+        // .mat-step-icon-state-done,
+        // .mat-step-icon-state-edit
+        .mat-step-icon-selected{
+          background-color: $secondary !important;
+          color: $white;
+        }
+        .mat-step-icon {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+      .mat-vertical-stepper-header {
+        height: 58px;
+        .mat-step-icon {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .mat-step-header:hover:not([aria-disabled]){
+    background-color: transparent;
+  }
+  // .mat-step-header .mat-step-header-ripple{
+  //   display: none;
+  // }
+  .mat-vertical-content-container{
+    margin-left: 12px;
+    .mat-vertical-stepper-content{
+      margin-left: 20px;
+      // background: rgb(255, 255, 255);
+      // padding-top: 24px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      visibility: inherit;
+      border: 1px solid $off-white-1;
+      border-top: none;
+      .mat-vertical-content{
+        padding: 15px;
+        // form{
+        //   border-top: 1px solid rgba($black, 20%);
+        //   padding-top: 15px;
+        // }
+      }
+    }
+  }
+}
+
+.mat-stroked-button:not(.mat-button-disabled){
+  border-color: $primary;
+}
+
+.mat-step-header.cdk-keyboard-focused,
+.mat-step-header.cdk-program-focused,
+.mat-step-header:hover:not([aria-disabled]),
+.mat-step-header:hover[aria-disabled=false] {
+  background-color: transparent !important;
+}

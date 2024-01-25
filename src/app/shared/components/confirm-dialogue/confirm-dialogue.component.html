@@ -1,0 +1,18 @@
+<div id="delete-confirmation-modal" class="confirm-modal text-center">
+  <div class="action-icon warning"><mat-icon>info</mat-icon></div>
+  <h1 mat-dialog-title *ngIf="data.confirm_button_text == 'Delete'; else otherBlock">Confirm Deletion !</h1>
+  <ng-template #otherBlock>
+    <h1 mat-dialog-title>Confirm Dialog</h1>
+  </ng-template>
+  <div mat-dialog-content>
+      <span *ngIf="data">{{data.confirm_text}}</span>
+  </div>
+  <div mat-dialog-actions align="center">
+      <button mat-flat-button (click)="onClose()" *ngIf="!fileDeleteLoader">{{data.cancel_button_text}}</button>
+      <button  mat-flat-button (click)="goToDownload()" *ngIf="data.for=='export_csv'">{{data.confirm_button_text}}</button>
+      <button mat-flat-button color="warn" (click)="onDelete()" *ngIf="!fileDeleteLoader && !(data.for=='export_csv')">{{data.confirm_button_text}}</button>
+      <span class="display-inlineF pull-right" *ngIf="fileDeleteLoader">
+          <mat-spinner diameter="20" class="m-r-5"></mat-spinner>{{data.loader_text}}
+      </span>
+  </div>
+</div>

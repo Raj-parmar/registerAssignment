@@ -1,0 +1,12 @@
+::ng-deep{
+    #delete-confirmation-modal{
+        .mat-dialog-title{
+            border-bottom: none !important;
+            background: transparent;
+        }
+        .mat-dialog-actions{
+            background: transparent;
+            border-top: none !important;
+        }
+    }
+}

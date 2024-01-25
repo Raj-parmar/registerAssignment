@@ -1,0 +1,59 @@
+
+.mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary{
+  background-color: $primary;
+  color: $white;
+  text-transform: uppercase;
+  padding: 16px 40px;
+  line-height: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  &:hover{
+    background-color: $secondary;
+  }
+}
+
+.mat-stroked-button{
+  text-transform: uppercase !important;
+  padding: 15px 40px !important;
+  line-height: 14px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+
+.mat-fab{
+  width: 40px !important;
+  height: 40px !important;
+  .mat-button-wrapper{
+    padding: 0 !important;
+  }
+}
+
+.ctr-toggle-btn{
+  .mat-button-toggle-group-appearance-standard{
+    border: none;
+  }
+  .mat-button-toggle{
+    background: #E1E1E1;
+    border-radius: 10px;
+    padding: 0 30px;
+    font-size: 17px;
+  }
+  .mat-button-toggle-group-appearance-standard .mat-button-toggle+.mat-button-toggle{
+    border: none;
+    margin-left: 10px;
+  }
+  .mat-button-toggle-checked{
+    background-color: $secondary;
+    color: $white;
+  }
+  .mat-button-toggle-checked .mat-button-toggle-focus-overlay{
+    border-bottom: solid 0;
+  }
+}
+
+
+@media screen and (max-width: 920px) and (min-width: 280px) {
+  .responsive-btn {
+    width: 100%;
+  }
+}

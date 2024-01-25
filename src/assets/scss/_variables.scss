@@ -1,0 +1,50 @@
+$off-white:#f3f3f3;
+$off-white-1:#EBEBF2;
+$off-white-2: #ededed;
+$white:#ffffff;
+$black:#000000;
+// $primary:#43BA86;
+$primary:#002d61;
+$secondary: #0acc8b;
+$theme:#002d61;
+$font-color:#002e62;
+$text-color:#1a1c1e;
+// $danger:#eb2352;
+$danger:#ff0000;
+$warning:#fdc22a;
+$success:#43BA86;
+$error:#990000; //color same as staging
+$border-color: #e2e2e2;
+$global-color-2: #222222;
+$input-text: #666;
+$input-bg: #fafafa;
+$theme-xlight:#e9eff4;
+// $theme-xlighter: #dde7ef80;
+$theme-xlighter:transparentize($theme-xlight, 0.50);
+//Membership portal navbar colors
+$top-nav-bg: #16163f;
+
+/*Space between elements*/
+$space1:0.5rem;
+$space2:1rem;
+$space3:1.25rem;
+$space4:1.5rem;
+$space5:3rem;
+$space6:3.5rem;
+$space7:4rem;
+$space8:4.5rem;
+$space9:5rem;
+
+// media aliases and breakpoints
+$screen-sm-min: 767.97px;
+$screen-md-min: 960px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1920px;
+
+$screen-xs-max: 768px;
+$screen-sm-max: 959px;
+$screen-md-max: 1279px;
+$screen-lg-max: 1919px;
+$screen-xl-max: 5000px;
+
+$screen-laptop-max: 1420px;

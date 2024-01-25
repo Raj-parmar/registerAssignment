@@ -1,0 +1,229 @@
+<div class="header-block">
+  <div class="header-first" style="display: none;">
+    <div class="header-row">
+      <div class="col-50">
+        <div class="social-icon-container">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/TalentSmartEQ" target="_blank">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/TalentsmartEQ" target="_blank">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/talentsmarteq/" target="_blank">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCTGJYjvBOR0fNECajDIfvKw" target="_blank">
+                <i class="fa fa-youtube-play" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/talentsmart/" target="_blank">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-50">
+w
+      </div>
+    </div>
+  </div>
+  <mat-toolbar class="header-first" style="display: none;">
+    <mat-toolbar-row class="header-row">
+      <div class="sub-menu-new">
+
+        <div class="social-icon">
+          <div>
+            <a href="https://www.facebook.com/TalentSmartEQ" target="_blank">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://twitter.com/TalentsmartEQ" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/talentsmarteq/" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCTGJYjvBOR0fNECajDIfvKw" target="_blank">
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/talentsmart/" target="_blank">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.tiktok.com/@talentsmarteq" target="_blank">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="other-menu-option">
+          <input type="checkbox" id="check-new">
+          <label for="check-new" class="hamburger-new">
+            <mat-icon> expand_more</mat-icon>
+          </label>
+          <div class="items-top-menu">
+            <div class="menu-icons-right">
+              <a *ngIf="isAuthenticated">
+                <span>Welcome {{userDetails.fname}}!</span>
+              </a>
+              <a href="/account-information" class="pointer" *ngIf="isAuthenticated">
+                <span>My Account</span>
+              </a>
+              <a [routerLink]="['/auth/login']" *ngIf="!isAuthenticated">
+                
+                <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                <span class="login-menu">Login</span>
+              </a>
+              <a [routerLink]="['/auth/register']" *ngIf="!isAuthenticated">
+                
+                <i class="fa fa-pencil" aria-hidden="true"></i>
+                <span>Register</span>
+              </a>
+              <a class="pointer">
+                
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                <span>EQ Info Download</span>
+              </a>
+              
+              <a [routerLink]="['/checkout/list/show']" class="pointer">
+                <i class="fa fa-shopping-cart" aria-hidden="true" ></i>
+              </a>
+              <a href="{{customUrl?.shop}}" class="pointer">
+                <span>Shop</span>
+              </a>
+
+              <a class="pointer" *ngIf="isAuthenticated">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <span>Logout</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-toolbar class="header-first header-sm">
+    <mat-toolbar-row class="header-row">
+        <div class="other-menu-option">
+          <!-- <div class="items-top-menu"> -->
+            <div class="menu-icons-right">
+
+              <a *ngIf="isAuthenticated">
+                <span>Welcome {{userDetails.fname}}!</span>
+              </a>
+              <a href="/account-information" class="pointer" *ngIf="isAuthenticated">
+                My Account
+              </a>
+            <div class="menu-row-one">
+                <a [routerLink]="['/auth/login']" *ngIf="!isAuthenticated">
+                  <span class="login-menu">Login</span>
+                </a>
+                <a [routerLink]="['/auth/register']" *ngIf="!isAuthenticated">
+                
+                  Register
+                </a>
+            </div>
+            <div>              
+              <a class="pointer">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </a>
+              <a class="pointer">
+                Shop
+              </a>
+
+              <a class="pointer" *ngIf="isAuthenticated">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                Logout
+              </a>
+            </div>
+            </div>
+          <!-- </div> -->
+        </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-toolbar class="header-first">
+    <mat-toolbar-row class="header-row">
+        <div class="social-icon">
+          <div>
+            <ul>
+              <li>
+            <a href="https://www.facebook.com/TalentSmartEQ" target="_blank">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a></li>
+            <li>
+            <a href="https://twitter.com/TalentsmartEQ" target="_blank">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a></li>
+            <li>
+            <a href="https://www.instagram.com/talentsmarteq/" target="_blank">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a></li>
+            <li>
+            <a href="https://www.youtube.com/channel/UCTGJYjvBOR0fNECajDIfvKw" target="_blank">
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </a></li>
+            <li>
+            <a href="https://www.linkedin.com/company/talentsmart/" target="_blank">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a></li>
+            <li>
+            <a href="https://www.tiktok.com/@talentsmarteq" target="_blank">
+              <!-- <i class="fa fa-linkedin" aria-hidden="true"></i> -->
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg>
+            </a></li>
+          </ul>
+          </div>
+        </div>
+
+        <div class="other-menu-option menu-options-sm">
+          <!-- <div class="items-top-menu"> -->
+            <div class="menu-icons-right">
+              <a *ngIf="isAuthenticated" class="pointer pointer-icons-fonts pointer-icons">
+                Welcome {{userDetails.fname}}!
+              </a>
+              <a href="/account-information" class="pointer pointer-icons" *ngIf="isAuthenticated">
+                My Account
+              </a>
+              <a class="pointer pointer-icons" *ngIf="isAuthenticated">
+                Logout
+              </a>
+              <a [routerLink]="['/auth/login']" *ngIf="!isAuthenticated" class="pointer pointer-icons">
+               Login
+              </a>
+              <a [routerLink]="['/auth/register']" *ngIf="!isAuthenticated" class="mr-2 register-icon">
+                Register
+              </a>
+              <a class="pointer pointer-icons-fonts pointer-icons light-text-header">
+                <i class="fa fa-file-text-o mr-0" aria-hidden="true"></i>
+                EQ Info Download
+              </a>
+              <a [routerLink]="['/checkout/list/show']" class="pointer pointer-icons light-text-header">
+                <i class="fa fa-shopping-cart mr-0" aria-hidden="true"></i>
+              </a>
+              <a href="{{customUrl?.shop}}" class="pointer pointer-icons light-text-header">Shop</a>
+              
+            </div>
+          <!-- </div> -->
+        </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  
+    <div class="header-second">
+      <mat-toolbar>
+        <mat-toolbar-row class="header-row">
+          
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+  </div>

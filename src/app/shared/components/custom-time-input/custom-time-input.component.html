@@ -1,0 +1,16 @@
+<div role="group" class="app-custom-time-input-container" [formGroup]="parts" [attr.aria-labelledby]="_formField?.getLabelId()"
+     (focusin)="onFocusIn($event)" (focusout)="onFocusOut($event)">
+    <input 
+        class="app-custom-time-input-element" formControlName="hour" size="2" maxLength="2"
+        aria-label="Area code" (input)="_handleInput(parts.controls.hour, minute)" #hour>
+    <span class="app-custom-time-input-spacer">&#58;</span>
+    <input 
+        class="app-custom-time-input-element" formControlName="minute" maxLength="2" size="2"
+        aria-label="Exchange code" (input)="_handleInput(parts.controls.minute, second)"
+        (keyup.backspace)="autoFocusPrev(parts.controls.minute, hour)" #minute>
+    <span class="app-custom-time-input-spacer">&#58;</span>
+    <input 
+        class="app-custom-time-input-element" formControlName="second" maxLength="2" size="2"
+        aria-label="second number" (input)="_handleInput(parts.controls.second)"
+         #second>
+</div>

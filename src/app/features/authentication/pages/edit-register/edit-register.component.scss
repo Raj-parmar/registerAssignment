@@ -1,0 +1,135 @@
+@import "../../../../../assets/scss/variables";
+
+.register-main {
+    display: flex;
+    flex-direction: row !important;
+    align-items: baseline !important;
+
+    .box-bg-color {
+        background-color: #FAFAFA;
+
+        .register-box {
+            width: 50%;
+
+            .heading-register {
+                white-space: nowrap;
+            }
+        }
+
+    }
+
+    .submit-register {
+        color: $white;
+        background-color: $primary;
+        border: 2px solid $primary;
+        border-radius: 20px;
+        font-size: 15px;
+
+        .submit-register-text {
+            padding: 20px;
+        }
+    }
+
+    .submit-register:hover {
+        color: $primary;
+        background-color: $white;
+        border: 2px solid $primary;
+    }
+
+    ::ng-deep {
+        .register-select {
+            .ng-select {
+                .ng-select-container {
+                    .ng-value-container {
+                        padding-left: 5px;
+                    }
+                }
+
+                &.ng-select-single {
+                    .ng-select-container {
+                        div {
+                            input {
+                                padding-left: 10px;
+                                line-height: 40px;
+                            }
+                        }
+                    }
+
+                    .ng-clear-wrapper {
+                        bottom: 12px !important;
+                    }
+
+                    .ng-value-container {
+                        .ng-value {
+                            line-height: 35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.register-padding {
+    padding: 60px !important;
+}
+
+
+.register-vertical {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.phone {
+    padding-right: 15px;
+    width: 60%;
+}
+
+@media only screen and (max-width: 990px) {
+    .register-main {
+        flex-direction: column !important;
+
+        .register-box {
+            width: 100% !important;
+        }
+    }
+
+    .register-vertical {
+        flex-direction: column;
+
+        .phone {
+            width: 100%;
+            padding-right: 0px;
+        }
+
+        .ext {
+            width: 100%;
+        }
+    }
+}
+
+.mat-list-base {
+  .mat-list-item {
+    .material-icons{
+      color: $secondary !important;
+    }
+    .mat-list-item-content{
+      padding-left: 0 !important;
+    }
+  }
+}
+
+.register-info{ 
+    line-height: 29px;
+    margin-left: 14px;
+}
+.register-info-card{
+    max-width: 415px;
+    width: 415px;
+    p{
+        line-height: 20px;
+    }
+}

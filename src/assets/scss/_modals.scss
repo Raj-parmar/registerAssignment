@@ -1,0 +1,13 @@
+.searchDialog{
+  max-width: 100vw !important;
+  width: 100vw;
+  height: 100vh;
+  .mat-dialog-container{
+    background-color: $primary;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    display: flex;
+  }
+}

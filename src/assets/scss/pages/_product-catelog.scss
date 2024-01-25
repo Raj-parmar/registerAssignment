@@ -1,0 +1,104 @@
+.product-face {
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    margin: 5px;
+    @include border-radius(10px, all);
+    img {
+        height: 40px;
+        width: 50px;
+        object-fit: cover;
+    }
+}
+.upload-container {
+    .upload-area {
+        position: relative;
+        // background: lighten($primary, 45%);
+        border: 3px dashed $primary;
+        @include border-radius(10px, all);
+        padding: 4rem 2rem;
+        text-align: center;
+        input[type="file"] {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            opacity: 0;
+            cursor: pointer;
+            left: 0;
+            top: 0;
+        }
+        .upload-text {
+            mat-icon {
+                color: $primary;
+                font-size: 3rem;
+                height: auto;
+                width: auto;
+            }
+            h3 {
+                margin-bottom: 0;
+                color: $primary;
+                font-weight: 500;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+        .view-img{
+            max-width: 100%;
+            margin: 0 auto;
+            max-height: 204px;
+            min-height: 204px;
+        }
+        file-upload{
+            background: rgba($primary,0.15);
+            outline: none;
+            @include border-radius(10px, all);
+            margin-bottom: 0.5rem;
+            .upload-input{
+                color: $primary;
+                .icon{
+                    border:none;
+                    svg{
+                        fill:$primary
+                    }
+                }
+                &:hover{
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+    .uploaded-photos {
+        margin-top: 1rem;
+        display: flex;
+        overflow: auto;
+        .photo-list {
+            height: 70px;
+            width: 70px;
+            flex: 0 0 70px;
+            @include border-radius(10px, all);
+            overflow: hidden;
+            margin-right: 10px;
+            position: relative;
+            img {
+                height: 70px;
+                width: 70px;
+                object-fit: cover;
+            }
+            mat-icon{
+                position: absolute;
+                color: $primary;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+}
+fieldset{
+    border: none;
+    padding: 0;
+    min-width: auto;
+}

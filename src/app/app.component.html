@@ -1,0 +1,49 @@
+<!-- <app-header (sideHideShow)="sidenav.toggle()" *ngIf="showHead"></app-header> -->
+<!-- <app-header (sideHideShow)="sidenav.toggle()"></app-header>
+<mat-drawer-container class="main-container" [ngClass]="{'login-main': !showHead}"> -->
+  <!-- <mat-drawer #sidenav class="side-navbar" mode="side" *ngIf="showHead" opened>
+        <app-sidebar *ngIf="showHead"></app-sidebar>
+    </mat-drawer> -->
+  <!-- <mat-drawer-content> -->
+    <!-- <mat-progress-bar *ngIf="commonService.isLoading | async" mode="indeterminate"></mat-progress-bar> -->
+    <!-- <div class="page-body-wrapper" *ngIf="showHead">
+      <div class="content-wrapper" *ngIf="showHead">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <router-outlet *ngIf="!showHead"></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+<app-footer></app-footer> -->
+
+<!-- <app-header (sideHideShow)="sidenav.toggle()"></app-header>
+<div>
+  <div class="page-body-wrapper">
+    <div class="content-wrapper">
+      secondary-bg
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer> -->
+
+<app-header></app-header>
+<div class="page-body-wrapper">
+  <div class="content-wrapper">
+    <mat-toolbar color="primary" class="app-toolbar" *ngIf="(isMobile || isDesktop) && showHead">
+      <button mat-icon-button (click)="toggleSideNav()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-drawer-container class="main-container" *ngIf="showHead">
+      <!-- <mat-drawer #sidenav class="side-navbar" mode="side"  opened>
+          <app-sidebar></app-sidebar>
+      </mat-drawer> -->
+      <mat-drawer-content class="drawer-content-body">
+        <router-outlet></router-outlet>
+      </mat-drawer-content>
+    </mat-drawer-container>
+    <router-outlet *ngIf="!showHead"></router-outlet>
+  </div>
+</div>
+<app-footer></app-footer>

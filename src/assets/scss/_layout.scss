@@ -1,0 +1,13 @@
+html,body{
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif !important;
+    color: $font-color;
+    font-size: 0.875rem !important;
+}
+.main-container{
+    background: transparent;
+    // height: calc(100vh - 64px);
+}

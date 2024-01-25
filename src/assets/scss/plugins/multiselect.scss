@@ -1,0 +1,8 @@
+// css for ng-select with mat error
+.ngSelect-with-matError{
+    &.mat-error{
+      // position: absolute;
+      line-height: 13px;
+      padding: 0 2px!important;
+    }
+  }

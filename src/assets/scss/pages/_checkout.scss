@@ -1,0 +1,172 @@
+
+// step 1
+.mat-card{
+  &.cart-items-block{
+    .mat-card-title{
+      border-bottom: 1px solid $theme;
+      margin-bottom: 0;
+    }
+    // .mat-card-content{
+    //   height: calc(100vh - 305px);
+    // }
+    .cart-item-bg-height{
+      height: calc(100vh - 357px);
+    }
+    .cart-items-list {
+      max-height: calc(100vh - 449px);
+      overflow: auto;
+      .cart-item {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $theme-xlight;
+        padding: $space1 0;
+
+        .cart-item-info {
+          h3 {
+            font-weight: 500;
+            margin-bottom: 0;
+          }
+        }
+
+        .cart-item-price {}
+      }
+    }
+    .sub-total,
+    .shipping-charge,
+    .grand-total{
+      padding: $space1 0 0 0;
+      text-align: right;
+    }
+  }
+}
+
+.mat-card{
+  &.shipping-option-block{
+    .mat-card-title{
+      border-bottom: 1px solid $theme;
+      margin-bottom: 0;
+    }
+    .shipping-option-list{
+      height: calc(100vh - 357px);
+      overflow: auto;
+      .shipping-option{
+        width: 100%;
+        border-bottom: 1px solid $theme-xlight;
+        padding: $space1 0;
+        display: flex;
+        h4 {
+          line-height: 20px;
+          font-weight: 500;
+          margin-bottom: 0;
+          font-size: 14px;
+        }
+        .cost{
+          float: right;
+          color: $primary;
+        }
+        .duration{
+          font-size: 13px;
+          .material-icons{
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+          }
+        }
+        .expected-date{
+          font-size: 13px;
+          ul{
+            margin: 0;
+            padding: 0 0 0 16px;
+          }
+        }
+        .select-shipping-type{
+          padding-left: 10px;
+        }
+        .shipping-info{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.billing-info-block{
+  .billing-addr-list{
+    height: calc(100vh - 357px);
+    overflow: auto;
+  }
+  .billing-addr-item{
+    width: 100%;
+    border-bottom: 1px solid #e9eff4;
+    padding: 0.5rem 0;
+    display: flex;
+    // align-items: center;
+    .select-billing-addr{
+      width: 30px;
+      padding-left: 10px;
+    }
+    .billing-info{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      // .billing-addr{
+      //   width: 100%;
+      //   display: flex;
+      //   justify-content: space-between;
+      // }
+      .billing-action{
+        text-align: center;
+        display: flex;
+        // align-items: center;
+      }
+    }
+  }
+}
+
+.shipping-info-block{
+  .shipping-addr-list{
+    height: calc(100vh - 357px);
+    overflow: auto;
+  }
+  .shipping-addr-item{
+    width: 100%;
+    border-bottom: 1px solid #e9eff4;
+    padding: 0.5rem 0;
+    display: flex;
+    .select-shipping-addr{
+      width: 30px;
+      padding-left: 10px;
+    }
+    .shipping-info{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .shipping-action{
+        text-align: center;
+        display: flex;
+      }
+    }
+  }
+}
+
+.price-th{
+  width: 52px;
+}
+.total-price-th{
+  width: 80px;
+}
+
+.billingForm-bg-height,
+.shippingForm-bg-height{
+  height: 430px;
+  @media screen and (max-width: 1484px) {
+    height: 440px;
+  }
+}
+
+.addEdit-billingForm-bg-height,
+.addEdit-shippingForm-bg-height{
+  height: 470px;
+}
